@@ -4,5 +4,6 @@
   vars:
     path: /tmp/foo.txt
     mode: before
+    verbose: true
 
 - include_tasks: print.yml

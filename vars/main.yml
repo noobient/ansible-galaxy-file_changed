@@ -1,0 +1,2 @@
+---
+eff_verbose: "{{ verbose | default(false) | bool }}"

@@ -11,6 +11,7 @@ This is useful when you do ad-hoc commands (`command`, `shell`, etc.) that canno
 |---|---|---|---|
 | `path` | yes | `/etc/acme/foobar.com/foobar.com.cer` | File to check changes on. |
 | `mode` | yes | `before` | Indicate whether the check is before or after the command(s). Possible values are `before` and `after`. If `before`, it calculates the checksum, if `after`, it checks the current checksum with the one calculated during the `before` run, and indicates the change if they differ. |
+| `verbose` | no | `true` | If `true`, print more diagnostic messages. Defaults to `false`. |
 
 ## Examples
 
@@ -31,6 +32,7 @@ This is useful when you do ad-hoc commands (`command`, `shell`, etc.) that canno
   vars:
     path: /etc/foo.conf
     mode: after
+    verbose: true
 ```
 
 ## Return Values
