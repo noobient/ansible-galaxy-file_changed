@@ -1,6 +1,6 @@
 ---
 - set_fact:
-    bviktor_file_changed_after_checksum: "{{ file_changed_stat.stat.checksum }}"
+    bviktor_file_changed_after_checksum: "{{ file_changed_stat.stat.checksum | default('') }}"
 
 - set_fact:
     file_changed:

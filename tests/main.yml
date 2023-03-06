@@ -1,6 +1,9 @@
 ---
 - hosts: 127.0.0.1
   tasks:
+    # Error tolerance
+    - include_tasks: before.yml
+
     - name: Create file
       file:
         path: /tmp/foo.txt
@@ -8,6 +11,8 @@
         owner: root
         group: root
         mode: '0644'
+
+    - include_tasks: after.yml
 
     - include_tasks: before.yml
 
