@@ -1,2 +1,3 @@
+---
 - debug:
     msg: "{{ file_changed.changed }}"
