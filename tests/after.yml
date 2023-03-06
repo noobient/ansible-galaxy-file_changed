@@ -1,0 +1,8 @@
+---
+- include_role:
+    name: "{{ playbook_dir.split('/')[:-1] | last }}"
+  vars:
+    path: /tmp/foo.txt
+    mode: after
+
+- include_tasks: print.yml

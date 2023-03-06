@@ -1,0 +1,10 @@
+---
+- name: Check file checksum
+  stat:
+    path: "{{ path }}"
+    checksum_algorithm: sha256
+    follow: true
+    get_attributes: false
+    get_checksum: true
+    get_mime: false
+  register: file_changed_stat

@@ -1,0 +1,23 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+    - name: Create file
+      file:
+        path: /tmp/foo.txt
+        state: touch
+        owner: root
+        group: root
+        mode: '0644'
+
+    - include_tasks: before.yml
+
+    - name: Do stuff on file
+      shell:
+        cmd: echo bar > /tmp/foo.txt
+      changed_when: false
+
+    - include_tasks: after.yml
+
+    # Idempotency
+    - include_tasks: before.yml
+    - include_tasks: after.yml

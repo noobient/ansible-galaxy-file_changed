@@ -1,0 +1,8 @@
+---
+- include_tasks: checksum.yml
+
+- include_tasks: before.yml
+  when: mode == 'before'
+
+- include_tasks: after.yml
+  when: mode == 'after'

@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  role_name: file_changed
+  author: Viktor Berke
+  description: Detect file changes between operations to preserve idempotency
+  license: license (MIT)
+  min_ansible_version: '2.10'
+  platforms: []
+  galaxy_tags: []

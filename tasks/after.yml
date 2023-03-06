@@ -1,0 +1,7 @@
+---
+- set_fact:
+    bviktor_file_changed_after_checksum: "{{ file_changed_stat.stat.checksum }}"
+
+- set_fact:
+    file_changed:
+      changed: "{{ bviktor_file_changed_before_checksum != bviktor_file_changed_after_checksum }}"
