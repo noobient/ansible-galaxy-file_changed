@@ -17,7 +17,7 @@ This is useful when you do ad-hoc commands (`command`, `shell`, etc.) that canno
 
 ```yml
 - include_role:
-    name: bviktor.file_changed
+    name: noobient.file_changed
   vars:
     path: /etc/acme/foobar.com/foobar.com.cer
     mode: before
@@ -28,7 +28,7 @@ This is useful when you do ad-hoc commands (`command`, `shell`, etc.) that canno
   changed_when: false
 
 - include_role:
-    name: bviktor.file_changed
+    name: noobient.file_changed
   vars:
     path: /etc/foo.conf
     mode: after
